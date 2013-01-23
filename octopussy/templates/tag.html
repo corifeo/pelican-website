@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}{{ SITENAME }} &raquo; {{ tag }}{% endblock %}
+{% block stitle %} &raquo; {{ tag }}{% endblock %}
+{% set index=True %}
+{% block content %}
+<div class="blog-index">
+{% if articles %}
+{% for article in articles %} 
+<article>
+<header>
+<h1 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title|striptags }}</a></h1>
+{% include '_includes/article_infos.html' %}
+</header>
+<div class="entry-content">{{ article.summary }}</div>
+<footer>
+<a rel="full-article" href="{{ SITEURL }}/{{ article.url }}">Read On &crarr;</a>
+</footer>
+</article>
+{% endfor %}
+{% include '_includes/pagination.html' %}
+{% endif %}                                           
+</div>
+{% include '_includes/sidebar.html' %}
+{% endblock %}
+
