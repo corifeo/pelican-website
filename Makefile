@@ -72,6 +72,6 @@ ftp_upload: publish
 github: publish
 	git add .
 	git commit -am "make publish"
-	git push origin master
+	git push pelican-web master
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload github
