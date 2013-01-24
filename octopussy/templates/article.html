@@ -2,16 +2,16 @@
 {% block title %}{{ SITENAME }} &raquo; {{ article.title }}{% endblock %}
 {% block content %}
 <div class="blog-index">
-  <article>
-    {% include '_includes/article.html' %}
-    <footer>
-    {% if DISQUS_SITENAME %}
-     <section>
-       <div id="disqus_thread" aria-live="polite">{% include '_includes/disqus_thread.html' %}</div>
-     </section>
-    {% endif %}
-    </footer>
-  </article>
+<article>
+{% include '_includes/article.html' %}
+<footer>
+{% if DISQUS_SITENAME %}
+<section>
+<div id="disqus_thread" aria-live="polite">{% include '_includes/disqus_thread.html' %}</div>
+</section>
+{% endif %}
+</footer>
+</article>
 </div>
 {% include '_includes/sidebar.html' %}
 {% endblock %}

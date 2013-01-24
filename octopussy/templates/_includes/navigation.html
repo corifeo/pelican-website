@@ -1,26 +1,25 @@
 <ul class="subscription" data-subscription="rss">
 {% if TWITTER_USERNAME %}
-  <li><a href="http://twitter.com/{{ TWITTER_USERNAME }}" rel="twitter">TWITTER</a></li>
+<li><a href="http://twitter.com/{{ TWITTER_USERNAME }}" rel="twitter">TWITTER</a></li>
 {% endif %}
 {% if GITHUB_URL %}
-  <li><a href="{{ GITHUB_URL }}" rel="github">GITHUB</a></li>
+<li><a href="{{ GITHUB_URL }}" rel="github">GITHUB</a></li>
 {% endif %}
 {% if FEED_RSS %}
-  <li><a href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" rel="subscribe-rss">RSS</a></li>
+<li><a href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" rel="subscribe-rss">RSS</a></li>
 {% endif %}
 </ul>
-
 <ul class="main-navigation">
-  {% for title, link in MENUITEMS %}
-  <li><a href="{{ link }}">{{ title }}</a></li>
-  {% endfor %}
-  {% if DISPLAY_PAGES_ON_MENU %}
-  {% for page in PAGES %}
-  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-  {% endfor %}
-  {% endif %}
-  {% for category, articles in categories %}
-  <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
-  {% endfor %}
-  <li><a href="{{ SITEURL }}/archives.html">archives</a></li>
+{% for title, link in MENUITEMS %}
+<li><a href="{{ link }}">{{ title }}</a></li>
+{% endfor %}
+{% if DISPLAY_PAGES_ON_MENU %}
+{% for page in PAGES %}
+<li><a href="{{ page.url }}">{{ page.title }}</a></li>
+{% endfor %}
+{% endif %}
+{% for category, articles in categories %}
+<li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+{% endfor %}
+<li><a href="{{ SITEURL }}/archives.html">archives</a></li>
 </ul>

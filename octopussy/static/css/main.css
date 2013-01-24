@@ -436,9 +436,12 @@ figure.code .highlight { margin-bottom: 0; }
 #blog-archives time .month, #blog-archives time .day { display: inline-block; }
 #blog-archives time .month { text-transform: uppercase; }
 #blog-archives p { margin-bottom: 1em; }
-#blog-archives a, #blog-archives .entry-content a { color: inherit; }
+#blog-archives a, #blog-archives .entry-content a { color: inherit; text-decoration: none;}
 #blog-archives a:hover, #blog-archives .entry-content a:hover { color: #0181eb; }
 #blog-archives a:hover { color: #0181eb; }
+#blog-archives footer a:after {  content: ", "}
+#blog-archives footer a:last-child:after {  content: ""}
+
 @media only screen and (min-width: 550px) { #blog-archives article { margin-left: 5em; }
   #blog-archives h2 { margin-bottom: .3em; font-weight: normal; display: inline-block; position: relative; top: -1px; float: left; }
   #blog-archives h2:first-child { padding-top: .75em; }

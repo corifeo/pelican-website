@@ -2,26 +2,31 @@
 {% block title %}{{ SITENAME }} &raquo; archives{% endblock %}
 {% block stitle %} &raquo; archives{% endblock %}
 {% block content %}
-<div class="blog-index">
-{% for year, date_year in dates|groupby( 'date.year' ) %}
-<dl class="archives">
-<dt>{{ year }}</dt>
+<div>
+<article role="article">
+<div id="blog-archives">
+{% for year, date_year in dates| groupby( 'date.year' ) | reverse %}
+<h2>{{ year }}</h2>
 {% for month, articles in date_year|groupby( 'date.month' ) %}
-<dd>
-<dl>
-<dt>{{ articles[ 0 ].date.strftime( '%b' ) }}</dt>
 {% for article in articles %}
-<dd><a href="{{ article.url }}">{{ article.title }}</a> 
-<small>
-{% for tag in article.tags %}<a href="{{ SITEURL }}/tag/{{ tag }}.html" class="tag">{{tag}}</a>{% endfor %}
-</small>
-</dd>
+<article>
+<h1><a href="{{ article.url }}">{{ article.title }}</a></h1>
+<time datetime="{{ articles[ 0 ].date }}" pubdate>
+<span class='month'>{{ articles[ 0 ].date.strftime( '%b' ) }}</span>
+<span class='day'>{{ articles[ 0 ].date.strftime( '%d' ) }}</span>
+<span class='year'>{{ articles[ 0 ].date.strftime( '%Y' ) }}</span></time>
+<footer>
+<span>&raquo;</span>
+{% for tag in article.tags %}
+<a href="{{ SITEURL }}/tag/{{ tag }}.html" class="tag">{{tag}}</a>
 {% endfor %}
-<dl>
-</dd>
+</footer>
+</article>
 {% endfor %}
-</dl>
+{% endfor %}
 {% endfor %}
 </div>
+</article>
+</div>
+{% include '_includes/sidebar.html' %}
 {% endblock %}
-        
