@@ -18,5 +18,6 @@ DELETE_OUTPUT_DIRECTORY = True
 DISQUS_SITENAME = 'francescomanzoni'
 LLOOGG_SITENAME = '21b00219802e3f8d'
 TWITTER_USERNAME = 'corifeo'
+ABOUTME_USERNAME = 'francescomanzoni'
 GITHUB_URL = 'http://github.com/corifeo/'
 

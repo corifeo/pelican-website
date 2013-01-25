@@ -1,9 +1,11 @@
 <aside class="sidebar">
+{% if ABOUTME_USERNAME %}
 <section>
-<h1>About</h1>
-<p>{{ SHORTBIO }}</p>
+<h1>About.me</h1>
+<script src="http://about.me/embed/francescomanzoni?image=0&amp;name=0&amp;headline=0&amp;apps=0&amp;style=site"></script>
 </section>
 <section>
+{% endif%}
 <h1>Recent Posts</h1>
 <ul id="recent_posts">
 {% for article in articles[:5] %}
