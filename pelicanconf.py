@@ -7,6 +7,7 @@ SHORTBIO = ("I break things down to rebuild them better or just to have fun and 
 
 THEME = 'octopussy'
 THEME_STATIC_PATHS = (['static'])
+DIRECT_TEMPLATES = (('index', 'categories', 'archives'))
 # Move upload and static files to output directory
 STATIC_PATHS = (['uploads'])
 FILES_TO_COPY = ([('extra/robots.txt', 'robots.txt')])

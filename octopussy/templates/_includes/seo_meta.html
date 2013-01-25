@@ -1,0 +1,7 @@
+{% if article %}
+<meta name="description" content="{{ article.summary | striptags}}">
+<meta name="keywords" content="{{ article.tags|join(', ')}}">
+{% else %}
+<meta name="keywords" content="{% print tag_cloud.0.tag %}">
+{% endif %}
+

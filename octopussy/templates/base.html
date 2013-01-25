@@ -6,11 +6,7 @@
 <meta charset="utf-8">
 <title>{% block title %}{{SITENAME}}{% endblock title %}</title>
 <meta name="author" content="{{ AUTHOR }}">
-{% if article %}
-<meta name="keywords" content="{{ article.tags|join(', ')}}">
-{% else %}
-<meta name="keywords" content="{{ tags[0]|join(', ')}}"> 
-{% endif %}
+{% include '_includes/seo_meta.html' %}
 {% if FEED_RSS %}
 <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}"  type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
 {% endif %}
