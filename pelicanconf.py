@@ -47,3 +47,4 @@ LINKS =  (('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),
 SOCIAL = (('twitter', 'http://twitter.com/corifeo'),
          ('github', 'http://github.com/corifeo'),)
 
+PLUGINS = ['pelican.plugins.pelican-gist']
