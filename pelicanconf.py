@@ -3,16 +3,16 @@ AUTHOR = u'Francesco Manzoni'
 SITENAME = u'francescomanzoni.com'
 SUBTITLE = u'Security, coding, reasonably priced love and a hard-boiled egg'
 TIMEZONE = 'Europe/Rome'
-SHORTBIO = ("I break things down to rebuild them better or just to have fun and learn something new. I usually spend most of my time hacking things, reviewing code and partying hard. I love bacon.")
 
 THEME = 'octopussy'
 THEME_STATIC_PATHS = (['static'])
 DIRECT_TEMPLATES = (('index', 'categories', 'archives'))
 # Move upload and static files to output directory
 STATIC_PATHS = (['uploads'])
-FILES_TO_COPY = ([('extra/robots.txt', 'robots.txt')])
-FILES_TO_COPY = ([('extra/0x49ABF9BF.asc', 'static/0x49ABF9BF.asc')])
-FILES_TO_COPY = ([('extra/htaccess', '.htaccess')])
+FILES_TO_COPY = (
+	('extra/robots.txt', 'robots.txt'),
+	('extra/0x49ABF9BF.asc', 'static/0x49ABF9BF.asc'),
+	('extra/htaccess', '.htaccess'))
 
 
 RELATIVE_URLS = False
@@ -39,9 +39,7 @@ CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
                                              
 
 # Blogroll
-LINKS =  (('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),
-          ('Python.org', 'http://python.org'),
-          ('Jinja2', 'http://jinja.pocoo.org'),)
+LINKS =  (('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),)
 
 # Social widget
 SOCIAL = (('twitter', 'http://twitter.com/corifeo'),
